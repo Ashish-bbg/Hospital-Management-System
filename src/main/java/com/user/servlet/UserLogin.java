@@ -25,6 +25,8 @@ public class UserLogin extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		System.out.println("Executed this");
+		
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 		String redirect = req.getParameter("redirect");

@@ -12,15 +12,17 @@
 <style>
 .container {
 	display: flex;
+	justify-content: space-between;
 }
 
 .left-container {
 	display: flex;
 	flex-wrap: wrap;
+	box-shadow: none;
 }
 
 .right-container {
-	
+	box-shadow: none;
 }
 
 .left-content {

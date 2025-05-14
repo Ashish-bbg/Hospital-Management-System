@@ -64,7 +64,7 @@
 
 .left-container {
 	/* border: 1px solid green; */
-	width: 29%;
+	/*width: 29%;*/
 	margin: 1.5rem;
 	border-radius: 10px;
 	box-shadow: 2px 2px 11px grey;

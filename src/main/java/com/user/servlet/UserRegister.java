@@ -2,6 +2,7 @@ package com.user.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,17 +40,15 @@ public class UserRegister extends HttpServlet {
 			HttpSession session = req.getSession();
 
 			if (f) {
-				session.setAttribute("userObj", user);
-				if (!redirect.isEmpty() && redirect.equals("index.jsp")) {
-					resp.sendRedirect(redirect);
-				}
-				else {
-					session.setAttribute("successMessage", "Register Successfull");
-					resp.sendRedirect("signup.jsp");
+				RequestDispatcher rd = req.getRequestDispatcher("/userLogin");
+				rd.forward(req, resp);					
+				session.setAttribute("successMessage", "Register Successfull");
+//					resp.sendRedirect("signup.jsp");
+//				System.out.println("Data inserted successfully...");
 				}
 
-				System.out.println("Data inserted successfully...");
-			} else {
+			 else {
+				System.out.println("Went wrong..");
 				session.setAttribute("errorMessage", "Something wrong on server");
 				System.out.println("Something went wrong...");
 			}

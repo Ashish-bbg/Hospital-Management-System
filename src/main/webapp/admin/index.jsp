@@ -42,6 +42,12 @@
 	margin-bottom: 0;
 	font-size: 19px;
 }
+
+
+
+.btn:hover {
+		
+}
 </style>
 
 </head>
@@ -59,45 +65,45 @@
 
 	<h2 class="admin-title">Admin Dashboard</h2>
 
+			<%
+			DoctorDao dao = new DoctorDao(DBConnect.getConn());
+			int doctCnt = dao.countDoctor();
+			int userCnt = dao.countUser();
+			int appointCnt = dao.countAppointment();
+			int specalistCnt = dao.countSpecalist();
+			%>
 	<div class="card-container">
 
 		<div class="card-content">
 			<i class="fa-solid fa-user-doctor fa-3x" style="color: #198754;"></i>
-			
-			<%
-				DoctorDao dao = new DoctorDao(DBConnect.getConn());
-				int doctCnt = dao.countDoctor();
-				int userCnt = dao.countUser();
-				int appointCnt = dao.countAppointment();
-				int specalistCnt = dao.countSpecalist();
-			%>
+
 			<p>Doctor</p>
-			<p><%= doctCnt %></p>
+			<p><%=doctCnt%></p>
 		</div>
 
 		<div class="card-content">
 			<i class="fa-solid fa-user fa-3x" style="color: #198754;"></i>
 			<p>User</p>
-			<p><%= userCnt %></p>
+			<p><%=userCnt%></p>
 		</div>
 
 		<div class="card-content">
 			<i class="fa-solid fa-calendar-check fa-3x" style="color: #198754;"></i>
 			<p>Total Appointment</p>
-			<p><%= appointCnt %></p>
+			<p><%=appointCnt%></p>
 		</div>
 
 		<div class="card-content" data-bs-toggle="modal"
 			data-bs-target="#exampleModal">
 			<i class="fa-solid fa-calendar-check fa-3x" style="color: #198754;"></i>
 			<p>Specialist</p>
-			<p><%= specalistCnt %></p>
-			
+			<p><%=specalistCnt%></p>
+
 			<c:if test="${not empty succMsg}">
 				<span class="msg" style="color: green; text-align: center">${succMsg}</span>
 				<c:remove var="succMsg" scope="session" />
 			</c:if>
-			
+
 			<script>
 				setTimeout(() => {
 					let msg = document.querySelector(".msg");
@@ -114,7 +120,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Specialist</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal"
 							aria-label="Close"></button>
 					</div>

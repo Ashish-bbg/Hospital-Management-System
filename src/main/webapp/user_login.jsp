@@ -51,7 +51,7 @@
 			<input type="hidden" name="redirect" value="<%= redirect %>" />
 		</form>
 		<p>
-			Don't have an account? <a href="signup.jsp?redirect=index.jsp">create one</a>
+			Don't have an account? <a href="signup.jsp">create one</a>
 		</p>
 	</div>
 

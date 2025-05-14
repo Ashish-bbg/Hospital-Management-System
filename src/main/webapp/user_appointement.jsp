@@ -102,7 +102,7 @@
 			<h3>User Appointement</h3>
 
 			<c:if test="${not empty errorMsg}">
-				<span class="remove" style="color: red">${erroMsg}</span>
+				<span class="remove" style="color: red">${errorMsg}</span>
 				<c:remove var="errorMsg" scope="session" />
 			</c:if>
 
@@ -154,7 +154,7 @@
 							<%
 						}
 					%>		
-					<option>demo</option>
+					
 					
 				</select> 
 				
@@ -163,9 +163,6 @@
 				  <label for="address">Full Address</label>
 				  <textarea name="full_address" id="address" rows="3" cols=""></textarea>
 				 
-				 <c:if test="${empty userObj}">
-				 	<button class="btn"><a href="user_login.jsp">Submit</a></button>
-				 </c:if>
 				 
 				 <c:if test="${not empty userObj}">
 				 	<input class="btn" type="submit" value="submit" />
