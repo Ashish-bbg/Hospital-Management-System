@@ -166,7 +166,7 @@ Below document provides the instructions to set up the database for the **Hospit
    ``` CREATE DATABASE hospital_management_system  ```
    - The database will consist of four tables: user_details, doctor, specialist, and appointment. Follow the steps below to       create each table.
      
- 2. Create Tables
+2. Create Tables
    2.1 create ```user_details``` tables
     ```
     CREATE TABLE user_details (
