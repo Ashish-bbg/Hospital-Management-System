@@ -12,6 +12,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	.left-container{
+		width: 30%;
+	}
+</style>
 <%@ include file="../component/allCss.jsp"%>
 
 </head>
