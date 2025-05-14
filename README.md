@@ -48,9 +48,7 @@ This is a **Java-based web application** that manages patient registrations, app
  http://localhost:8080/Hospital-Management-System/
 ```
 ## 📽️ Demo (Hospital Management System)
-
-[![Watch the demo](https://img.youtube.com/vi/1bVi-upXNs4/0.jpg)](https://youtu.be/1bVi-upXNs4)
-
+[![YouTube Video](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/1bVi-upXNs4)
 
 ---
 # Hospital Management System
