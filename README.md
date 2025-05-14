@@ -99,9 +99,9 @@ A simple web-based hospital management system that allows admins, doctors, and u
 
 ![Admin can add doctors by navigating to "Doctor" in the navigation bar and filling out doctor details](screenShort/5.png)
 
-![Admin can view and update doctor details by navigating to "View Doctor"]((screenShort/6.png)
+![Admin can view and update doctor details by navigating to "View Doctor"](screenShort/6.png)
 
-![Admin has control over patient information by navigating to "Patient"]((screenShort/7.png)
+![Admin has control over patient information by navigating to "Patient"](screenShort/7.png)
 
 ---
 
@@ -125,7 +125,7 @@ Doctors have a login page similar to Admin. Credentials are provided by the Admi
 
 ![This is the user Home page where they can book appointments, check appointment status, or change password](screenShort/12.png)
 
-![After login, users can book appointments by navigating to "Appointment"]((screenShort/14.png)
+![After login, users can book appointments by navigating to "Appointment"](screenShort/14.png)
 
 ![Users can view a list of their appointments by navigating to "View Appointment"](screenShort/15.png)
 
