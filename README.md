@@ -30,7 +30,7 @@ This is a **Java-based web application** that manages patient registrations, app
 ## ⚙️ How to Run the Project
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/your-username/Hospital-Management-System.git
    ```
 2. Import the project into Eclipse as a Maven or Dynamic Web Project.
@@ -44,7 +44,7 @@ This is a **Java-based web application** that manages patient registrations, app
 5. Deploy the project to Apache Tomcat from Eclipse.
 
 6. Open browser and access:
-```bash
+```
  http://localhost:8080/Hospital-Management-System/
 ```
 ## 📽️ Demo (Hospital Management System)
@@ -63,7 +63,7 @@ A simple web-based hospital management system that allows admins, doctors, and u
 
 ### 🔐 Admin
 
-- **Login** with default credentials: `admin / admin123`
+- **Login** with default credentials: ```admin / admin123```
 - Add, View, and Manage:
   - Doctors
   - Patients
@@ -143,7 +143,7 @@ Doctors have a login page similar to Admin. Credentials are provided by the Admi
 
 ## 📸 Screenshots
 
-All screenshots are located in the `screenShort/` folder and referenced throughout this README.
+All screenshots are located in the ```screenShort/``` folder and referenced throughout this README.
 
 ---
 
@@ -189,33 +189,34 @@ Below document provides the instructions to set up the database for the **Hospit
     mobno VARCHAR(20) NOT NULL,
     password VARCHAR(20) NOT NULL,
     PRIMARY KEY (id));
-```
+    ```
+   
+   2.3 Create ```Specalist``` Table
+   ```
+   CREATE TABLE specialist (
+       id INT NOT NULL AUTO_INCREMENT,
+       spec_name VARCHAR(20) NOT NULL,
+       PRIMARY KEY (id));
+    ```
+   2.4 Create ```Appointment``` table
 
-2.3 Create ```Specalist``` Table
-```CREATE TABLE specialist (
-    id INT NOT NULL AUTO_INCREMENT,
-    spec_name VARCHAR(20) NOT NULL,
-    PRIMARY KEY (id));
-```
-
-2.4 Create ```Appointment``` table
-```
-CREATE TABLE appointment (
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    user_id INT NOT NULL,
-    fullname VARCHAR(20) NOT NULL,
-    gender VARCHAR(20) NOT NULL,
-    age VARCHAR(20) NOT NULL,
-    appoint_date VARCHAR(20) NOT NULL,
-    email VARCHAR(45) NOT NULL,
-    phno VARCHAR(12) NOT NULL,
-    diseases VARCHAR(25) NOT NULL,
-    doctor_id INT NOT NULL,
-    address VARCHAR(100) NOT NULL,
-    status VARCHAR(100) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user_details(id) ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (doctor_id) REFERENCES doctor(id) ON UPDATE CASCADE ON DELETE CASCADE);
-```
+   ```
+   CREATE TABLE appointment (
+       id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+       user_id INT NOT NULL,
+       fullname VARCHAR(20) NOT NULL,
+       gender VARCHAR(20) NOT NULL,
+       age VARCHAR(20) NOT NULL,
+       appoint_date VARCHAR(20) NOT NULL,
+       email VARCHAR(45) NOT NULL,
+       phno VARCHAR(12) NOT NULL,
+       diseases VARCHAR(25) NOT NULL,
+       doctor_id INT NOT NULL,
+       address VARCHAR(100) NOT NULL,
+       status VARCHAR(100) NOT NULL,
+       FOREIGN KEY (user_id) REFERENCES user_details(id) ON UPDATE CASCADE ON DELETE CASCADE,
+       FOREIGN KEY (doctor_id) REFERENCES doctor(id) ON UPDATE CASCADE ON DELETE CASCADE);
+   ```
 
    
 
