@@ -150,6 +150,75 @@ All screenshots are located in the `screenShort/` folder and referenced througho
 ## 📂 Project Structure
 ![Structure](screenShort/structure.png)
 
+# Set Up for Database 
+
+## Overview
+Below document provides the instructions to set up the database for the **Hospital Management System** using MySQL. The system uses four tables to manage data related to users, doctors, specialists, and appointments.
+
+## Prerequisites
+- MySQL 8.0 or higher (you can use other versions as well)
+- Basic understanding of SQL
+- A MySQL client to execute the SQL queries (e.g., MySQL Workbench, phpMyAdmin, or command-line MySQL)
+
+## Steps to Set Up the Database
+
+1. Create database in MySql I have used MySql 8.0 but you can use any.
+   ``` CREATE DATABASE hospital_management_system  ```
+   - The database will consist of four tables: user_details, doctor, specialist, and appointment. Follow the steps below to       create each table.
+     
+ 2. Create Tables
+   2.1 create ```user_details``` tables
+    ```
+    CREATE TABLE user_details (
+    id INT NOT NULL AUTO_INCREMENT,
+    full_name VARCHAR(45) NOT NULL,
+    email VARCHAR(25) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id));
+     ```
+
+   2.2 Create ```doctor``` table
+   ```
+   CREATE TABLE doctor (
+    id INT NOT NULL AUTO_INCREMENT,
+    full_name VARCHAR(20) NOT NULL,
+    dob VARCHAR(20) NOT NULL,
+    qualification VARCHAR(20) NOT NULL,
+    specalist VARCHAR(20) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    mobno VARCHAR(20) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id));
+```
+
+2.3 Create ```Specalist``` Table
+```CREATE TABLE specialist (
+    id INT NOT NULL AUTO_INCREMENT,
+    spec_name VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id));
+```
+
+2.4 Create ```Appointment``` table
+```
+CREATE TABLE appointment (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    fullname VARCHAR(20) NOT NULL,
+    gender VARCHAR(20) NOT NULL,
+    age VARCHAR(20) NOT NULL,
+    appoint_date VARCHAR(20) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    phno VARCHAR(12) NOT NULL,
+    diseases VARCHAR(25) NOT NULL,
+    doctor_id INT NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    status VARCHAR(100) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user_details(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (doctor_id) REFERENCES doctor(id) ON UPDATE CASCADE ON DELETE CASCADE);
+```
+
+   
+
 ## 🙌 Contribution
 
 Feel free to fork and contribute. Pull requests are welcome.
