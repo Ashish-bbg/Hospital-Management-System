@@ -147,38 +147,7 @@ All screenshots are located in the `screenShort/` folder and referenced througho
 ---
 
 ## 📂 Project Structure
-Hospital_System/
-├── screenShort/ # All screenshots used in README
-├── src/
-│ └── main/
-│ ├── java/
-│ │ └── com/
-│ │ ├── admin.servlet/
-│ │ ├── dao/
-│ │ ├── db/
-│ │ ├── doctor.servlet/
-│ │ ├── entity/
-│ │ └── user.servlet/
-│ ├── resources/
-│ └── webapp/
-│ ├── admin/
-│ ├── component/
-│ ├── doctor/
-│ ├── img/
-│ ├── META-INF/
-│ ├── WEB-INF/
-│ ├── admin_login.jsp
-│ ├── change_password.jsp
-│ ├── doctor_login.jsp
-│ ├── index.jsp
-│ ├── signup.jsp
-│ ├── user_appointement.jsp
-│ ├── user_login.jsp
-│ └── view_appointment.jsp
-├── .classpath
-├── .gitignore
-├── .project
-└── README.md
+![Structure](screenShort/structure.png)
 
 ## 🙌 Contribution
 
