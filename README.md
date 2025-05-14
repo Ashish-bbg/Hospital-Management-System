@@ -32,3 +32,23 @@ This is a **Java-based web application** that manages patient registrations, app
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Hospital-Management-System.git
+   ```
+2. Import the project into Eclipse as a Maven or Dynamic Web Project.
+
+3. Configure the database:
+   - Create a MySQL database (e.g., hospital_db)
+   - Run the provided SQL script or create required tables manually
+     
+4. Update database connection credentials in your DAO or utility class.
+
+5. Deploy the project to Apache Tomcat from Eclipse.
+
+6. Open browser and access:
+```bash
+ http://localhost:8080/Hospital-Management-System/
+```
+## 📽️ Demo (Hospital Management System)
+
+[![Watch the demo](https://img.youtube.com/vi/1bVi-upXNs4/0.jpg)](https://youtu.be/1bVi-upXNs4)
+
+---
